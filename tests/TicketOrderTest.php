@@ -7,7 +7,7 @@ class TicketOrderTest extends TestCase
     public function testTotalPriceStandardWithoutGlasses()
     {
         $order = new TicketOrder('Semyon', 2, 'Interstellar', false, 'standard');
-        $this->assertEquals(2, 1 + 2);
+        $this->assertEquals(800, $order->getTotalPrice());
     }
 
     public function testTotalPriceVipWithGlasses()
